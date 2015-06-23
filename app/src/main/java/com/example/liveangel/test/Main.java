@@ -1,9 +1,14 @@
 package com.example.liveangel.test;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import com.order.manager.OrderManagerActivity;
 
 
 public class Main extends ActionBarActivity {
@@ -12,6 +17,17 @@ public class Main extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //initialize button
+        Button orderManagerButton = (Button) findViewById(R.id.orderManager);
+        orderManagerButton.setOnClickListener(new Button.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent();
+                intent.setClass(Main.this, OrderManagerActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
 
 

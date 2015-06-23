@@ -14,95 +14,37 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/content_in_label_DAddress"
-        android:id="@+id/label_DAddress"
-        android:textSize="32sp"
-        android:textStyle="normal|bold" />
+        android:text="@string/content_in_label_dorm"
+        android:id="@+id/label_dorm"
+        android:textSize="24sp"
+        android:textStyle="normal" />
 
-    <GridLayout
-        android:columnCount="5"
-        android:rowCount="2"
-        android:layout_width="362dp"
+
+    <Spinner
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:id="@+id/dorm_spinner"/>
 
-        <EditText
-            android:layout_width="267dp"
-            android:layout_height="50dp"
-            android:inputType="textPostalAddress"
-            android:ems="10"
-            android:id="@+id/edit_street"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_columnSpan="4"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_room"
+        android:text="@string/content_in_label_room"
+        android:textSize="24sp"
+        android:textStyle="normal"/>
 
-        <TextView
-            android:layout_width="71dp"
-            android:layout_height="34dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/content_in_label_street"
-            android:id="@+id/label_street"
-            android:layout_row="0"
-            android:layout_column="4"
-            android:textSize="24sp"
-            android:textStyle="italic"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="7sp"
-            android:layout_marginLeft="7sp" />
-
-        <EditText
-            android:inputType="text"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/edit_building"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_columnSpan="2"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/content_in_label_building"
-            android:id="@+id/label_building"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:layout_gravity="bottom"
-            android:textSize="24sp"
-            android:textStyle="italic"
-            android:layout_marginStart="7sp"
-            android:layout_marginLeft="7sp" />
-
-        <EditText
-            android:inputType="number"
-            android:layout_width="61dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/edit_room"
-            android:layout_row="1"
-            android:layout_column="3"
-            android:layout_marginStart="10sp"
-            android:layout_marginLeft="10sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/content_in_label_room"
-            android:id="@+id/label_room"
-            android:layout_row="1"
-            android:layout_column="4"
-            android:layout_marginStart="7sp"
-            android:layout_marginLeft="7sp"
-            android:textSize="24sp"
-            android:textStyle="italic"
-            android:layout_gravity="bottom"/>
-
-    </GridLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="5"
+        android:id="@+id/room_editText" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button_submit_DAddress"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="15sp"
         android:text="@string/content_in_button_submit_DAdress" />
 </LinearLayout>
